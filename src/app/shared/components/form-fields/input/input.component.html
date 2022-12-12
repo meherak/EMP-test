@@ -1,0 +1,35 @@
+<div
+  class="mb-3"
+  [ngClass]="{
+    'input-group': group
+  }"
+>
+  <label [for]="id" class="form-label" *ngIf="label"
+    >{{ label }} <span *ngIf="isRequired()">*</span></label
+  >
+  <span class="input-group-text bg-dark" *ngIf="group">
+    <ng-content select="[icon]"></ng-content>
+  </span>
+  <input
+    [id]="id"
+    class="form-control"
+    [ngClass]="{
+      'is-invalid':
+        control && control.touched && control.dirty && control.invalid
+    }"
+    [type]="type"
+    [(ngModel)]="value"
+    [placeholder]="placeholder ? placeholder : label"
+    [maxLength]="maxlength"
+    [minLength]="minlength"
+    [disabled]="disabled"
+    [autocomplete]="type"
+  />
+</div>
+
+<emp-form-field-errors
+  [serverErrorMsg]="serverErrorMsg"
+  [errorMessages]="errorMessages"
+  [control]="control"
+>
+</emp-form-field-errors>

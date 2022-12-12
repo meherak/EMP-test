@@ -1,0 +1,30 @@
+<h1 class="title mb-3 text-center">SE CONNECTER</h1>
+<div class="alert alert-danger text-center p-2" role="alert" *ngIf="error">
+  {{ error }}
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <emp-input [group]="true" placeholder="Email" formControlName="email">
+    <i class="fa fa-user-circle-o" aria-hidden="true" icon></i>
+  </emp-input>
+  <emp-input
+    [group]="true"
+    type="password"
+    formControlName="password"
+    placeholder="Mot de passe"
+  >
+    <i class="fa fa-key" aria-hidden="true" icon></i>
+  </emp-input>
+  <div class="d-flex align-items-center justify-content-between mt-4">
+    <emp-button
+      type="submit"
+      label="Se Connecter"
+      cssClass="btn-primary"
+      [loading]="loading | async"
+      [disabled]="!form.valid || submitted"
+    ></emp-button>
+
+    <a class="text-muted fw-normal" routerLink="../signup" title="Créer un nouveau compte ?"
+      >Créer un nouveau compte ?</a
+    >
+  </div>
+</form>

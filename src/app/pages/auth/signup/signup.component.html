@@ -1,0 +1,29 @@
+<h1 class="title mb-3 text-center">BIENVENUE</h1>
+<div class="alert alert-danger text-center p-2" role="alert" *ngIf="error">
+  {{ error }}
+</div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <emp-input placeholder="Name" formControlName="name"></emp-input>
+  <emp-input placeholder="Surname" formControlName="surname"></emp-input>
+  <emp-input placeholder="Phone" formControlName="phone"></emp-input>
+  <emp-input placeholder="Email" formControlName="email"></emp-input>
+  <emp-input
+    type="password"
+    formControlName="password"
+    placeholder="Mot de passe"
+  ></emp-input>
+
+  <div class="d-flex align-items-center justify-content-between mt-4">
+    <emp-button
+      type="submit"
+      label="Enregistrer"
+      cssClass="btn-primary"
+      [loading]="loading | async"
+      [disabled]="!form.valid || submitted"
+    ></emp-button>
+
+    <a class="text-muted fw-normal" routerLink="../login" title="Se connecter ?"
+      >Se connecter ?</a
+    >
+  </div>
+</form>

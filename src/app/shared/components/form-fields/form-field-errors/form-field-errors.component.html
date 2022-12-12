@@ -1,0 +1,11 @@
+<div class="input-error-field mb-3" *ngIf="control && control.invalid && control.dirty">
+    <div class="text-danger" role="alert">
+        <ng-template ngFor let-item [ngForOf]="control.errors | keyvalue" let-i="index">
+            <div class="text-danger" role="alert">
+                {{!!item.key ? errorMessages[item.key] : ''}}
+            </div>
+        </ng-template>
+    </div>
+
+    <div class="text-danger" role="alert" *ngIf="serverErrorMsg">{{ serverErrorMsg }}</div>
+</div>

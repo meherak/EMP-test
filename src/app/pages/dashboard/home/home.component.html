@@ -1,0 +1,27 @@
+<div class="home-wrapper p-2">
+  <emp-data-grid
+    pageTitle="Liste des utilisateurs"
+    [columns]="columns"
+    [loading]="loading"
+    [dataSource]="dataSource"
+    [totalRecords]="totalRecords"
+    [pTableInputs]="pTableInputs"
+    [dataGridOptions]="dataGridOptions"
+    (deleteRow)="onDeleteActionFired($event)"
+  >
+    <div *empTemplateKey="'phoneCellTemplate'; let data">
+      <span
+        class="badge rounded-pill text-bg-success d-inline-flex align-items-center justify-content-center"
+      >
+        <i class="pi pi-phone mr-2" aria-hidden="true"></i>
+        {{ data.data.phone }}
+      </span>
+    </div>
+    <!-- <div
+      *templateKey="'actionsCelltemplate'; let data"
+      class="text-center d-flex"
+    >
+      {{ data.data }}
+    </div> -->
+  </emp-data-grid>
+</div>

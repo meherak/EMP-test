@@ -1,0 +1,14 @@
+// Primeng styles
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css";
+
+// Variables
+@import "./theme/variables/bootstrap";
+
+// External Modules
+@import "/node_modules/bootstrap-scss/bootstrap.scss";
+@import "/node_modules/font-awesome/scss/font-awesome.scss";
+
+// Project Theme
+@import "./theme/app";

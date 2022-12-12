@@ -1,0 +1,54 @@
+$body-bg: #f8f9fa !default;
+
+// scss-docs-end theme-color-variables
+$primary: #2374e1 !default;
+$secondary: #6c757d !default;
+$success: #198754 !default;
+$info: #0dcaf0 !default;
+$warning: #ffc107 !default;
+$danger: #dc3545 !default;
+$light: #f8f9fa !default;
+$dark: #343a40 !default;
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+) !default;
+
+$btn-border-radius: 2px !default;
+$btn-padding-x: 1.5rem !default;
+$btn-white-space: nowrap !default;
+$btn-focus-width: none !default;
+
+// card variables
+// $card-spacer-y:                     $spacer !default;
+// $card-spacer-x:                     $spacer !default;
+// $card-title-spacer-y:               $spacer * .5 !default;
+// $card-border-width:                 $border-width !default;
+// $card-border-color:                 var(--#{$prefix}border-color-translucent) !default;
+// $card-border-radius:                $border-radius !default;
+// $card-box-shadow:                   null !default;
+// $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+// $card-cap-padding-y:                $card-spacer-y * .5 !default;
+// $card-cap-padding-x:                $card-spacer-x !default;
+// $card-cap-bg:                       rgba($black, .03) !default;
+// $card-cap-color:                    null !default;
+// $card-height:                       null !default;
+$card-color: white !default;
+$card-bg: #24252f !default;
+
+// $card-img-overlay-padding:          $spacer !default;
+// $card-group-margin:                 $grid-gutter-width * .5 !default;
+
+$input-bg: #24252f !default;
+$input-color: white !default;
+$input-padding-y: 0.75rem !default;
+$input-border-radius: 2px !default;
+$input-border-color: rgb(231 231 231 / 39%) !default;
